@@ -7,11 +7,30 @@
   --primary-font: 'Poppins', sans-serif;
 }
 
+html, body {  /* Sticky Footer */
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   font-size: 16px;
   font-family: var(--primary-font);
+  /* Sticky Footer */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {  /* Sticky Footer */
+  flex-grow: 1; 
+}
+
+footer{  /* Sticky Footer */
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .sr-only {
@@ -25,6 +44,8 @@ body {
   padding: 0;
   position: absolute;  
 }
+
+
 
 .fm-attribution {
   font-size: 11px;
