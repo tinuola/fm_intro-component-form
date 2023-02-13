@@ -14,40 +14,42 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Intro Component with Signup Form | Frontend Mentor</title>
   </head>
-  <body>  
-    <h1 class="sr-only">Intro Component with Signup Form - A Frontend Mentor Project</h1>
+  <body>
+    <div class="site-wrapper">
+      <h1 class="sr-only">Intro Component with Signup Form - A Frontend Mentor Project</h1>
     
-    <main class="container">
-      <div class="column-left">
-        <h2>Learn to code by watching others</h2>
-        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
-      </div>
-      <div class="colunm-right">
-        <div class="cta-label">Try it free 7 days then $20/mo. thereafter</div>
-        
-        <form action="javascript:void(0);" class="signup">
+      <main class="container">
+        <div class="column column-left">
+          <h2>Learn to code by watching others</h2>
+          <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+        </div>
+        <div class="column colunm-right">
+          <div class="cta-label"><span>Try it free 7 days</span> then $20/mo. thereafter</div>
+          
+          <form action="javascript:void(0);" class="signup">
 
-          <label for="firstname-input" class="sr-only">First Name</label>
-          <input type="text" name="first-name" placeholder="First Name" />
+            <label for="firstname-input" class="sr-only">First Name</label>
+            <input type="text" name="first-name" placeholder="First Name" />
 
-          <label for="lastname-input" class="sr-only">Last Name</label>
-          <input type="text" name="last-name" placeholder="Last Name" />
+            <label for="lastname-input" class="sr-only">Last Name</label>
+            <input type="text" name="last-name" placeholder="Last Name" />
 
-          <label for="email-input" class="sr-only">Email Address</label>
-          <input type="email" name="email-address" placeholder="Email Address" />
+            <label for="email-input" class="sr-only">Email Address</label>
+            <input type="email" name="email-address" placeholder="Email Address" />
 
-          <label for="password-input" class="sr-only">Password</label>
-          <input type="password" name="password" placeholder="Password" />
+            <label for="password-input" class="sr-only">Password</label>
+            <input type="password" name="password" placeholder="Password" />
 
-          <input type="button" value="Claim your free trial">
-          <p>By clicking the button, you are agreeing to our Terms and Services</p>
-        </form>
-      </div>
-    </main>
+            <input type="button" value="Claim your free trial">
+            <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+          </form>
+        </div>
+      </main>
     
-    <footer class="fm-attribution-row">
-      <p class="fm-attribution">Challenge by <a href="https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1" target="_blank">Frontend Mentor</a></p>
-      <p class="fm-attribution">Coded by <a href="https://github.com/tinuola/fm_intro-component" target="_blank">TechTinu</a></p>
-    </footer>
+      <footer class="fm-attribution-row">
+        <p class="fm-attribution">Challenge by <a href="https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1" target="_blank">Frontend Mentor</a></p>
+        <p class="fm-attribution">Coded by <a href="https://github.com/tinuola/fm_intro-component" target="_blank">TechTinu</a></p>
+      </footer>
+  </div>
   </body>
 </html>

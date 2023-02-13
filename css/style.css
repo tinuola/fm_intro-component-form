@@ -4,7 +4,8 @@
   --accent-blue: hsl(248, 32%, 49%);
   --neutral-dark-blue: hsl(249, 10%, 26%);
   --neutral-gray-blue: hsl(246, 25%, 77%);
-  --primary-font: 'Poppins', sans-serif;
+  --white: hsl(0, 0%, 100%);
+  --primary-font: 'Poppins', sans-serif
 }
 
 html, body {  /* Sticky Footer */
@@ -18,10 +19,16 @@ body {
   text-rendering: optimizeSpeed;
   font-size: 16px;
   font-family: var(--primary-font);
-  /* Sticky Footer */
+  font-weight: 500;
+  color: var(--white);
+}
+
+.site-wrapper { /* Sticky Footer */
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  min-width: 375px;
+  max-width: 1440px;
 }
 
 main {  /* Sticky Footer */
@@ -45,10 +52,105 @@ footer{  /* Sticky Footer */
   position: absolute;  
 }
 
+.container {
+  background-image: url(../assets/images/bg-intro-mobile.png);
+  background-color: var(--primary-red);
+  opacity: .9;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
 
+@media(min-width: 768px){
+  .container {
+    background-image: url(../assets/images/bg-intro-desktop.png);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .column {
+    flex: 1;
+  }
+}
+
+.column {
+  max-width: 365px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* padding-left: 1.25rem;
+  padding-right: 1.25rem; */
+}
+
+.column-left {
+  margin-bottom: 4rem;
+}
+
+.column-left h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.cta-label {
+  padding: 1rem 4rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  width: 100%;
+  background: var(--accent-blue);
+  border-radius: .5rem;
+}
+
+.cta-label span {
+  font-weight: 700;;
+}
+
+form {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+  border-radius: .25rem;
+  font-weight: 600;
+  border: 1px solid var(--neutral-gray-blue);
+}
+
+form input[type="button"] {
+  background: var(--primary-green);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 0;
+}
+
+form p {
+  color: var(--neutral-gray-blue);
+  font-size: .825rem;
+}
+
+form p span {
+  color: var(--primary-red);
+}
+
+.fm-attribution-row {
+  background: var(--primary-red);
+  padding: 1rem;
+  text-align: center;
+}
 
 .fm-attribution {
-  font-size: 11px;
+  font-size: .75rem;
 }
 
 .fm-attribution a {
