@@ -15,6 +15,6 @@ Live Site: []()
 ### Resources
 - []()
 - []()
-- []()
+- [CSSMatic Box Shadow](https://www.cssmatic.com/box-shadow)
 
 _Visit my Frontend Mentor profile to view other challenges I've completed!_
