@@ -26,22 +26,27 @@
         <div class="column colunm-right">
           <div class="cta-label"><span>Try it free 7 days</span> then $20/mo. thereafter</div>
           
-          <form class="signup">
+          <form action="javascript:void(0);" class="signup">
             <!-- action="javascript:void(0);" class="signup" -->
 
             <label for="firstname-input" class="sr-only">First Name</label>
-            <input type="text" name="first-name" id="firstname-input" placeholder="First Name" />
+            <input type="text" id="first-name" name="first-name" placeholder="First Name" />
+            <p class="error-msg" id="error-first-name">First Name cannot be empty</p>
 
             <label for="lastname-input" class="sr-only">Last Name</label>
-            <input type="text" name="last-name" id="lastname-input" placeholder="Last Name" />
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" />
+            <p class="error-msg" id="error-last-name">Last Name cannot be empty</p>
 
             <label for="email-input" class="sr-only">Email Address</label>
-            <input type="email" name="email-address" id="email-input" placeholder="Email Address" />
+            <input type="email" id="email" name="email" placeholder="Email Address" />
+            <p class="error-msg" id="error-email">Email Address cannot be empty</p>
+            <p class="error-msg" id="error-email2">Looks like this is not an email</p>
 
             <label for="password-input" class="sr-only">Password</label>
-            <input type="password" name="password" id="password-input" placeholder="Password" />
+            <input type="password" id="password" name="password" placeholder="Password" />
+            <p class="error-msg" id="error-password">Password cannot be empty</p>
 
-            <input type="button" id="submit-btn" value="Claim your free trial">
+            <button type="submit" id="submit-btn">Claim your free trial</button>
             <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
           </form>
         </div>

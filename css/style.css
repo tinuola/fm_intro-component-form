@@ -163,26 +163,70 @@ form {
   }
 }
 
-form input {
+input, button {
   display: block;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   padding: 1.25rem;
   border-radius: .25rem;
   font-weight: 600;
   border: 1px solid var(--neutral-gray-blue);
 }
 
-form input[type="button"] {
+input:first-of-type {
+  margin-top: 0;
+}
+
+.invalid-input {
+  border: 2px solid var(--primary-red);
+  background-image: url(../assets/images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 95%;
+}
+
+.invalid-input::-webkit-input-placeholder {
+  color: var(--primary-red);
+}
+
+.invalid-input::-moz-placeholder {
+  color: var(--primary-red);
+}
+
+.invalid-input:-ms-input-placeholder {
+  color: var(--primary-red);
+}
+
+.invalid-input::-ms-input-placeholder {
+  color: var(--primary-red);
+}
+
+.invalid-input::placeholder {
+  color: var(--primary-red);
+}
+
+.error-msg,
+.error-msg-email {
+  font-size: .75rem;
+  margin-top: 0.5rem;
+  text-align: right;
+  font-style: italic;
+  color: var(--primary-red);
+  display: none;
+}
+
+
+button {
   background: var(--primary-green);
   color: var(--white);
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 1rem;
   border: 0;
   box-shadow: 0px 1px 4px 1px rgb(9, 131, 78);
 }
 
-form input[type="button"]:hover {
+button:hover {
   cursor: pointer;
   background: hsl(154 90% 65%);
 }
