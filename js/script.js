@@ -22,11 +22,11 @@ const validateInput = (e) => {
     // Validate email field if it has a value
     if(inputName === 'email' && inputElem.value.length > 0){
       let validateEmail = inputElem.value.match(emailRegex)
+      errorMsg.style.display = 'none';
 
       if(!validateEmail){
         inputElem.classList.add('invalid-input')
         emailMsg.style.display = 'block';
-        errorMsg.style.display = 'none';
       } else {
         inputElem.classList.remove('invalid-input')
         emailMsg.style.display = 'none';
@@ -35,7 +35,7 @@ const validateInput = (e) => {
     } else if (input.value.length === 0){ 
       inputElem.classList.add('invalid-input')
       errorMsg.style.display = 'block';
- 
+      emailMsg.style.display = 'none';
     } else {
       inputElem.classList.remove('invalid-input')
       errorMsg.style.display = 'none';

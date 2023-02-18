@@ -205,8 +205,7 @@ input:first-of-type {
   color: var(--primary-red);
 }
 
-.error-msg,
-.error-msg-email {
+.error-msg{
   font-size: .75rem;
   margin-top: 0.5rem;
   text-align: right;
@@ -215,6 +214,9 @@ input:first-of-type {
   display: none;
 }
 
+.error-email2 {
+  display: none;
+}
 
 button {
   background: var(--primary-green);
