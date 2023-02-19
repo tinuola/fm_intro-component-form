@@ -10,36 +10,49 @@ const validateInput = (e) => {
   e.preventDefault()
 
   for(let input of inputArray){
-    // Get input name
+    // Get input name attribute
     let inputName = input.name
-    // Set input object
+    
+    // Set object for input element
     let inputElem = document.getElementById(inputName)
-    // Set input error msg object
-    let errorMsg = document.getElementById(`error-${inputName}`)
-    // Set 2nd email error obj
-    let emailMsg = document.getElementById('error-email2')
+    
+    // Set object for empty input field error msg
+    let emptyInputMsg = document.getElementById(`empty-${inputName}`)
 
-    // Validate email field if it has a value
-    if(inputName === 'email' && inputElem.value.length > 0){
+    // Set object for invalid email field error msg
+    let invalidEmailMsg = document.getElementById('invalid-email')
+    // let invalidEmailMsg = document.querySelector('.invalid-email')
+
+
+    if(inputName === 'email' && inputElem.value.length > 0) {
+      // console.log('email')
       let validateEmail = inputElem.value.match(emailRegex)
-      errorMsg.style.display = 'none';
-
-      if(!validateEmail){
+      if(!validateEmail) {
+        console.log('WRONG!')
+        invalidEmailMsg.classList.add('invalid-email-msg')
         inputElem.classList.add('invalid-input')
-        emailMsg.style.display = 'block';
+        emptyInputMsg.style.display = 'none'
       } else {
         inputElem.classList.remove('invalid-input')
-        emailMsg.style.display = 'none';
+        invalidEmailMsg.classList.remove('invalid-email-msg')
       }
-      // Validate all empty fields
-    } else if (input.value.length === 0){ 
+
+    } else if(inputName === 'email' && inputElem.value.length === 0) {
+      // console.log('empty')
       inputElem.classList.add('invalid-input')
-      errorMsg.style.display = 'block';
-      emailMsg.style.display = 'none';
+      emptyInputMsg.style.display = 'block'
+      invalidEmailMsg.classList.remove('invalid-email-msg')
+    } else if(inputElem.value.length === 0){
+      // console.log('empty')
+      inputElem.classList.add('invalid-input')
+      // invalidEmailMsg.classList.remove('invalid-email-msg')
+      emptyInputMsg.style.display = 'block'
     } else {
+      // console.log('valid')
       inputElem.classList.remove('invalid-input')
-      errorMsg.style.display = 'none';
+      emptyInputMsg.style.display = 'none'
     }
+
 
   }
 }
