@@ -12,8 +12,12 @@ Users should be able to:
   - The email address is not formatted correctly
 
 ### Solution
-Live Site: [tinuola.github.io/fm_intro-component/](tinuola.github.io/fm_intro-component/)
+Live Site: [https://tinuola.github.io/fm_intro-component/](https://tinuola.github.io/fm_intro-component/)
 
+### Potential Enhancement
+- Refactor JavaScript
+- Clear `invalid` input field outline styling if input field has any value
+- Add animation
 
 ### Tools & Resources
 - HTML, CSS, JavaScript
