@@ -21,40 +21,37 @@ const validateInput = (e) => {
 
     // Set object for invalid email field error msg
     let invalidEmailMsg = document.getElementById('invalid-email')
-    // let invalidEmailMsg = document.querySelector('.invalid-email')
+
 
 
     if(inputName === 'email' && inputElem.value.length > 0) {
-      // console.log('email')
+
       let validateEmail = inputElem.value.match(emailRegex)
+      
       if(!validateEmail) {
-        console.log('WRONG!')
         invalidEmailMsg.classList.add('invalid-email-msg')
         inputElem.classList.add('invalid-input')
         emptyInputMsg.style.display = 'none'
       } else {
-        inputElem.classList.remove('invalid-input')
         invalidEmailMsg.classList.remove('invalid-email-msg')
+        inputElem.classList.remove('invalid-input')
       }
 
     } else if(inputName === 'email' && inputElem.value.length === 0) {
-      // console.log('empty')
-      inputElem.classList.add('invalid-input')
-      emptyInputMsg.style.display = 'block'
       invalidEmailMsg.classList.remove('invalid-email-msg')
-    } else if(inputElem.value.length === 0){
-      // console.log('empty')
       inputElem.classList.add('invalid-input')
-      // invalidEmailMsg.classList.remove('invalid-email-msg')
       emptyInputMsg.style.display = 'block'
+
+    } else if(inputElem.value.length === 0){
+      inputElem.classList.add('invalid-input')
+      emptyInputMsg.style.display = 'block'
+
     } else {
-      // console.log('valid')
       inputElem.classList.remove('invalid-input')
       emptyInputMsg.style.display = 'none'
     }
-
-
   }
+
 }
 
 submitBtn.addEventListener('click', validateInput)
