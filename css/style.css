@@ -21,6 +21,7 @@ body {
   font-family: var(--primary-font);
   font-weight: 500;
   color: var(--white);
+  background-color: var(--primary-red);
 }
 
 .site-wrapper { /* Sticky Footer */
@@ -29,8 +30,8 @@ body {
   flex-direction: column;
   min-width: 375px;
   max-width: 1440px;
+  margin: 0 auto;
   background-image: url(../assets/images/bg-intro-mobile.png);
-  background-color: var(--primary-red);
 }
 
 @media (min-width: 900px){
